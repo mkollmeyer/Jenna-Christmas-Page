@@ -5,6 +5,13 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  --text-color: #000000; 
+}
+
+@media (prefers-color-scheme: dark) {
+  #root {
+    --text-color: #000000; /* White text for dark mode */
+  }
 }
 
 .logo {
