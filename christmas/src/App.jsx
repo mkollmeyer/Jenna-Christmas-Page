@@ -2,32 +2,41 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { getCard } from './card'
+import s1 from './assets/Snapchat-1015792040.jpg'
+import s2 from './assets/Snapchat-914667796.jpg'
+import s3 from './assets/Snapchat-1268713502.jpg'
+import s4 from './assets/Screenshot_20250223_003227_Instagram.jpg'
+import s5 from './assets/Snapchat-117300956.jpg'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [data, setData] = useState([]);
 
+  const handleClick = () => {
+    console.log("Click");
+    setData(getCard);
+    console.log(data);
+  }
   return (
     <>
+    <header>
+      <div class="image-row-container">
+          <img class="w-1/3 object-cover h-auto" src={s1} alt="Description 1"/>
+          <img class="w-1/3 object-cover h-auto" src={s2} alt="Description 2"/>
+          <img class="w-1/3 object-cover h-auto" src={s3} alt="Description 3"/>
+          <img class="w-1/3 object-cover h-auto" src={s4} alt="Description 3"/>
+          <img class="w-1/3 object-cover h-auto" src={s5} alt="Description 3"/>
+      </div>
+    </header>
+    <body className='body'>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1 classname='header'>Merry Christmas Jenna!!!</h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div>
+        <button onClick={handleClick}>Click Me</button>
+          <div className='cardContainer'> {data && <p className="customCard">{data}</p>} </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </body>
     </>
   )
 }
