@@ -21,16 +21,17 @@ function App() {
     <>
     <header>
       <div class="image-row-container">
-          <img class="w-1/3 object-cover h-auto" src={s1} alt="Description 1"/>
-          <img class="w-1/3 object-cover h-auto" src={s2} alt="Description 2"/>
-          <img class="w-1/3 object-cover h-auto" src={s3} alt="Description 3"/>
-          <img class="w-1/3 object-cover h-auto" src={s4} alt="Description 3"/>
-          <img class="w-1/3 object-cover h-auto" src={s5} alt="Description 3"/>
+          <img class="w-1/3 object-cover h-auto border-4 border-indigo-500 rounded-lg" src={s1} alt="Description 1"/>
+          <img class="w-1/3 object-cover h-auto border-4 border-indigo-500 rounded-lg" src={s2} alt="Description 2"/>
+          <img class="w-1/3 object-cover h-auto border-4 border-indigo-500 rounded-lg" src={s3} alt="Description 3"/>
+          <img class="w-1/3 object-cover h-auto border-4 border-indigo-500 rounded-lg" src={s4} alt="Description 3"/>
+          <img class="w-1/3 object-cover h-auto border-4 border-indigo-500 rounded-lg" src={s5} alt="Description 3"/>
       </div>
     </header>
     <body className='body'>
       <div>
-        <h1 classname='header'>Merry Christmas Jenna!!!</h1>
+        <h1 class="text-green-500 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-serif">Merry Christmas Jenna!!!</h1>
+        <h2 class="text-green-500 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-serif">I love you so incredibly much</h2>
       </div>
       <div>
         <button onClick={handleClick}>Click Me</button>
